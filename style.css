@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url("Background.gif") no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.player {
+    position: absolute;
+    width: 220px;
+    height: 260px;
+}
+
+#player1 {
+    left: 15%;
+    top: 40%;
+}
+
+#player2 {
+    left: 65%;
+    top: 40%;
+}
+
+.player img {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    height: 260px;
+    object-fit: contain;
+}
+
+/* Make only the standing character extra large */
+.player img#p1-stand,
+.player img#p2-stand {
+    width: 280px;
+    height: 320px;
+}
+
+.player img.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .player {
+        width: 140px;
+        height: 170px;
+    }
+
+    .player img {
+        width: 140px;
+        height: 170px;
+    }
+
+    .player img#p1-stand,
+    .player img#p2-stand {
+        width: 180px;
+        height: 210px;
+    }
+
+    #player1 {
+        left: 5%;
+        top: 40%;
+    }
+
+    #player2 {
+        left: 55%;
+        top: 40%;
+    }
+}
